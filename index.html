@@ -15,6 +15,170 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- ? start navbar-->
+    <nav class="navbar bg-dark color:cyan-700">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white">KPI</a>
+        <form class="d-flex" role="search">
+          <input
+            id="search"
+            class="form-control me-2"
+            type="search"
+            placeholder="Поиск студента"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-info" type="submit">Поиск</button>
+        </form>
+      </div>
+    </nav>
+    <!-- ? end navbar-->
+
+    <!-- ? start admin-panel-->
+    <div class="add-btn w-100 d-flex">
+      <button type="button" class="btn btn-info m-4">+</button>
+    </div>
+    <div class="container">
+      <div
+        class="w-100 d-flex flex-column justify-content-center align-items-center add-panel pb-4 bg"
+      >
+        <h2>Новый студент</h2>
+        <input
+          type="text"
+          id="name"
+          placeholder="Имя"
+          class="form-control mb-2 w-50"
+        />
+        <input
+          type="text"
+          id="surname"
+          placeholder="Фамилия"
+          class="form-control mb-2 w-50"
+        />
+        <input
+          type="number"
+          id="descr"
+          placeholder="Недельный KPI"
+          class="form-control mb-2 w-50"
+        />
+        <input
+          type="number"
+          id="ddt"
+          placeholder="Месячный KPI"
+          class="form-control mb-2 w-50"
+        />
+        <input
+          type="text"
+          id="number"
+          placeholder="Номер телефона"
+          class="form-control mb-2 w-50"
+        />
+        <button class="btn btn-primary w-50" id="btn-add">
+          Добавить студента
+        </button>
+      </div>
+    </div>
+    <!-- ? end admin-panel-->
+
+    <!-- ? start content-->
+
+    <div class="container">
+      <div
+        id="contact-list"
+        class="d-flex justify-content-evenly m-5 flex-wrap align-items-stretch"
+      ></div>
+    </div>
+    <!-- ? end content-->
+    <!-- ? start modal -->
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div
+              class="w-100 d-flex flex-column justify-content-center align-items-center"
+            >
+              <input
+                type="text"
+                id="edit-name"
+                placeholder="Имя"
+                class="form-control mb-2"
+              />
+              <input
+                type="text"
+                id="edit-surname"
+                placeholder="Фамилия"
+                class="form-control mb-2"
+              />
+              <input
+                type="number"
+                id="edit-descr"
+                placeholder="Недельный KPI"
+                class="form-control mb-2"
+              />
+              <input
+                type="number"
+                id="ddt"
+                placeholder="Месячный KPI"
+                class="form-control mb-2"
+              />
+              <input
+                type="number"
+                id="edit-number"
+                placeholder="Номер телефона"
+                class="form-control mb-2"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="btn-save-edit">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ? end modal -->
+    <!-- ? start pagination -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center pagin">
+        <li class="page-item prev">
+          <a class="page-link" href="#">Назад</a>
+        </li>
+        <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+        <div class="pagination-list d-flex"></div>
+        <li class="page-item next">
+          <a class="page-link" href="#">Далее</a>
+        </li>
+      </ul>
+    </nav>
+    <!--? end pagination -->
+
+    <script src="./JS/main.js"></script>
+
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

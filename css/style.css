@@ -1,0 +1,56 @@
+.add-panel {
+  display: none !important;
+  top: -100%;
+  z-index: 10;
+  transition: all 1s;
+}
+.add-panel-db {
+  display: flex !important;
+  position: absolute !important;
+  background-color: #fff;
+  z-index: 10;
+  animation: toBottom 1s;
+  animation: toBottom 1s ease 0s 1 normal forwards;
+}
+.add-panel-db1 {
+  display: flex !important;
+  position: absolute !important;
+  background-color: #fff;
+  z-index: 10;
+  animation: toTop 1s ease 0s 1 normal forwards;
+}
+.container {
+  position: relative !important;
+}
+@keyframes toBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes toTop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+body {
+  background: url(https://funart.pro/uploads/posts/2021-04/1618607386_40-funart_pro-p-oboi-fon-svetlii-goluboi-fon-41.jpg);
+}
+.bg {
+  background: url(https://funart.pro/uploads/posts/2021-04/1618607386_40-funart_pro-p-oboi-fon-svetlii-goluboi-fon-41.jpg);
+}
+.pagin {
+  margin-top: -2%;
+}
+.container {
+  margin-left: 49px;
+}
